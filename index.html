@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Desafio — Movimentando as Peças do Xadrez</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo">♟</div>
+    <div class="titles">
+      <h1>Desafio — Movimentando as Peças do Xadrez</h1>
+      <small>Selecione uma peça para ver os movimentos legais e clique em uma casa válida para mover.</small>
+    </div>
+    <div class="controls">
+      <button id="btnReset" class="btn">🔄 Reiniciar</button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <aside class="panel">
+      <div class="status"><strong>Turno:</strong> <span id="turno">Brancas</span></div>
+      <div class="legend">
+        <div><span class="dot move"></span> Movimento</div>
+        <div><span class="dot capture"></span> Captura</div>
+        <div><span class="dot sel"></span> Selecionada</div>
+      </div>
+      <p class="note">
+        Implementado: movimentos legais, captura, promoção simples, <b>xeque</b>, <b>xeque-mate</b> e <b>afogamento</b>.
+        (<em>Sem</em> roque e en passant.)
+      </p>
+      <div id="gameMsg" class="game-msg"></div>
+    </aside>
+
+    <section id="board" class="board" aria-label="Tabuleiro de xadrez"></section>
+  </main>
+
+  <footer class="footer">
+    <p><strong>Dica:</strong> use a tecla <kbd>R</kbd> para reiniciar rapidamente.</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
